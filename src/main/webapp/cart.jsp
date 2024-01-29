@@ -20,7 +20,7 @@
             <li class="nav-item"><a class="nav-link" href="AddToShoppingCart">Carrito</a></li>
             <li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
             <li class="nav-item"><a class="nav-link" href="admin.jsp">Administrar productos</a></li>
-            <li class="nav-item"><a class="nav-link" href="products-view.jsp">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="products">Productos</a></li>
         </ul>
         <div class="nav navbar-right">
             <div class="center-block">
@@ -38,6 +38,8 @@
             <tr>
                 <li>${item.key} - ${item.value} </li>
             </tr>
+            <a href="deleteFromShoppingCart?product=<c:out value="${item.key}"/>"> Eliminar </a>
+
         </c:forEach>
     </ul>
     <a href="index.jsp">Volver</a>
