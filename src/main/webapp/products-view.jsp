@@ -1,8 +1,15 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: UO284185
+  Date: 29/01/2024
+  Time: 11:48
+  sdi-2324-804-lab-jee
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="en">
 <head>
-    <title>Vista carrito</title>
+    <title>Productos</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet"
@@ -20,7 +27,7 @@
             <li class="nav-item"><a class="nav-link" href="AddToShoppingCart">Carrito</a></li>
             <li class="nav-item"><a class="nav-link" href="login.jsp">Login</a></li>
             <li class="nav-item"><a class="nav-link" href="admin.jsp">Administrar productos</a></li>
-            <li class="nav-item"><a class="nav-link" href="products-view.jsp">Productos</a></li>
+            <li class="nav-item"><a class="nav-link" href="products">Productos</a></li>
         </ul>
         <div class="nav navbar-right">
             <div class="center-block">
@@ -32,11 +39,11 @@
 </nav>
 <!-- Contenido -->
 <div class="container" id="main-container">
-    <h2>Vista Carrito</h2>
+    <h2>Productos</h2>
     <ul>
-        <c:forEach var="item" items="${selectedItems}">
+        <c:forEach var="product" items="${storeProducts}">
             <tr>
-                <li>${item.key} - ${item.value} </li>
+                <li>${product.name} - ${product.price}€ </li>
             </tr>
         </c:forEach>
     </ul>
